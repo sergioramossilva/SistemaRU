@@ -16,7 +16,7 @@ import org.springframework.stereotype.Repository;
 public class JpaDao<T, I> {
 
 	@PersistenceContext
-	protected EntityManager manager;
+	private EntityManager manager;
 	private final Class<T> entityClass;
 
 	public JpaDao(Class<T> entityClass) {
@@ -63,5 +63,17 @@ public class JpaDao<T, I> {
 		TypedQuery<T> typedQuery = manager.createQuery(query);
 		return typedQuery.getResultList();
 
+	}
+
+	public EntityManager getManager() {
+		return manager;
+	}
+
+	public void setManager(EntityManager manager) {
+		this.manager = manager;
+	}
+
+	public Class<T> getEntityClass() {
+		return entityClass;
 	}
 }
