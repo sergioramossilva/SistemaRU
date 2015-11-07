@@ -1,81 +1,52 @@
 package br.edu.utfpr.cm.tsi.pi.sistemaru.daos;
 
-import java.lang.reflect.Field;
 import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.persistence.TypedQuery;
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.Root;
 
-import org.springframework.stereotype.Repository;
+public class JpaDao<E, I> implements Dao<E, I> {
 
-@Repository
-public class JpaDao<T, I> {
+	private static final long serialVersionUID = 1L;
 
 	@PersistenceContext
 	private EntityManager manager;
-	private final Class<T> entityClass;
+	private Class<E> entityClass;
 
-	public JpaDao(Class<T> entityClass) {
-		this.entityClass = entityClass;
+	@Override
+	public void save(E entity) {
+		// TODO Auto-generated method stub
+
 	}
 
-	public void save(T objeto) {
+	@Override
+	public void delete(E entity) {
+		// TODO Auto-generated method stub
 
-		try {
-
-			Field chave = objeto.getClass().getDeclaredField("id");
-			chave.setAccessible(true);
-			Object valorChave = chave.get(objeto);
-
-			if (valorChave == null) {
-
-				manager.persist(objeto);
-			} else {
-
-				manager.merge(objeto);
-			}
-		} catch (Exception ex) {
-
-			ex.getMessage();
-		}
 	}
 
-	public void delete(T objeto) {
+	@Override
+	public E findById(I id) {
 
-//POG		
-		manager.remove(manager.merge(objeto));
+		return manager.find(this.getEntityClass(), id);
 	}
 
-	public T findById(I id) {
-
-		return manager.find(entityClass, id);
-	}
-
-	public List<T> getAll() {
-
-		CriteriaBuilder builder = manager.getCriteriaBuilder();
-		CriteriaQuery<T> query = builder.createQuery(entityClass);
-		Root<T> root = query.from(entityClass);
-		query.select(root);
-		TypedQuery<T> typedQuery = manager.createQuery(query);
-		return typedQuery.getResultList();
-		
-
+	@Override
+	public List<E> getAll() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	public EntityManager getManager() {
 		return manager;
 	}
 
-	public void setManager(EntityManager manager) {
-		this.manager = manager;
-	}
-
-	public Class<T> getEntityClass() {
+	public Class<E> getEntityClass() {
 		return entityClass;
 	}
+
+	public void setEntityClass(Class<E> entityClass) {
+		this.entityClass = entityClass;
+	}
+
 }

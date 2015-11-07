@@ -4,7 +4,7 @@ import javax.persistence.TypedQuery;
 
 import br.edu.utfpr.cm.tsi.pi.sistemaru.model.Funcionario;
 
-public class FuncionarioDao extends JpaDao<Funcionario, Long> {
+public class FuncionarioDao extends JpaDao2<Funcionario, Long> {
 
 	public FuncionarioDao() {
 		super(Funcionario.class);
