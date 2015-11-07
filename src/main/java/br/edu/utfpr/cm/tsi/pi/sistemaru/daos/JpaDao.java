@@ -46,6 +46,7 @@ public class JpaDao<T, I> {
 
 	public void delete(T objeto) {
 
+//POG		
 		manager.remove(manager.merge(objeto));
 	}
 
@@ -62,6 +63,7 @@ public class JpaDao<T, I> {
 		query.select(root);
 		TypedQuery<T> typedQuery = manager.createQuery(query);
 		return typedQuery.getResultList();
+		
 
 	}
 

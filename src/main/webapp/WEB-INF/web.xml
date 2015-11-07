@@ -4,28 +4,42 @@
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
 	version="3.1">
 	<display-name>SistemaRU</display-name>
-	<servlet>
-		<servlet-name>Spring-MVC</servlet-name>
-		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-		<init-param>
-			<param-name>contextConfigLocation</param-name>
-			<param-value>/WEB-INF/spring-context.xml</param-value>
-		</init-param>
-		<load-on-startup>1</load-on-startup>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>Spring-MVC</servlet-name>
-		<url-pattern>/</url-pattern>
-	</servlet-mapping>
-	<filter>
-		<filter-name>hiddenHttpMethodFilter</filter-name>
-		<filter-class>org.springframework.web.filter.HiddenHttpMethodFilter</filter-class>
-	</filter>
-	<filter-mapping>
-		<filter-name>hiddenHttpMethodFilter</filter-name>
-		<servlet-name>Spring-MVC</servlet-name>
-	</filter-mapping>
-	<session-config>
-		<session-timeout>5</session-timeout>
-	</session-config>
 </web-app>
+<!-- Listener do Spring  configurando o context loader do Spring, esse cara permite carregar N arquivos de configuração
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+  
+  permitirá utilizar os escopos padrões de uma aplicação web, como request ou session:
+  <listener>
+  <listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
+</listener>
+
+
+
+    <servlet>
+        <servlet-name>Spring-MVC</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <!-- Local do arquivo de configuração 
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>/WEB-INF/spring-context.xml</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Spring-MVC</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+    <filter>
+        <filter-name>hiddenHttpMethodFilter</filter-name>
+        <filter-class>org.springframework.web.filter.HiddenHttpMethodFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>hiddenHttpMethodFilter</filter-name>
+        <servlet-name>Spring-MVC</servlet-name>
+    </filter-mapping>
+    <session-config>
+        <session-timeout>5</session-timeout>
+    </session-config>
+  -->
