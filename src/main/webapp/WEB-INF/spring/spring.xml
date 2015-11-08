@@ -15,19 +15,8 @@
 
 	<!-- Configuração dos pacotes gerenciados pelo Spring -->
 	<context:component-scan base-package="br.edu.utfpr.cm.tsi.pi.sistemaru" />
-	<!-- <context:component-scan base-package="br.edu.utfpr.cm.tsi.pi.sistemaru.model" 
-		/> <context:component-scan base-package="br.edu.utfpr.cm.tsi.pi.sistemaru.daos" 
-		/> <context:component-scan base-package="br.edu.utfpr.cm.tsi.pi.sistemaru.controller" 
-		/> <context:component-scan base-package="br.edu.utfpr.cm.tsi.pi.sistemaru.service" 
-		/> <context:component-scan base-package="br.edu.utfpr.cm.tsi.pi.sistemaru.repository" 
-		/> -->
-	<!-- SpringMVC -->
+
+	<!-- Módulo do Spring-MVC -->
 	<import resource="spring-mvc.xml" />
-
-	<!-- SpringData -->
-	<!-- <import resource="spring-jpa.xml"/> -->
-
-	<!-- SpringSecurity -->
-	<!-- <import resource="spring-security.xml"/> -->
 
 </beans>
