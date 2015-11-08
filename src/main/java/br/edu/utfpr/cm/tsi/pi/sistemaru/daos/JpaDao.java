@@ -27,7 +27,6 @@ public class JpaDao<E, I> implements Dao<E, I> {
 
 	@Override
 	public E findById(I id) {
-
 		return manager.find(this.getEntityClass(), id);
 	}
 
