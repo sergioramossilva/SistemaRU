@@ -1,4 +1,4 @@
-package br.edu.utfpr.cm.tsi.pi.sistemaru.model;
+package br.edu.utfpr.cm.tsi.pi.sistemaru.models;
 
 public enum TipoTransacao {
 

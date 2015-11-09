@@ -1,4 +1,4 @@
-package br.edu.utfpr.cm.tsi.pi.sistemaru.controller;
+package br.edu.utfpr.cm.tsi.pi.sistemaru.controllers;
 
 import org.springframework.stereotype.Controller;
 

@@ -8,9 +8,9 @@
 		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
 		<!-- Mapeamento das classes -->
-		<class>br.edu.utfpr.cm.tsi.pi.sistemaru.model.Funcionario</class>
-		<class>br.edu.utfpr.cm.tsi.pi.sistemaru.model.Cliente</class>
-		<class>br.edu.utfpr.cm.tsi.pi.sistemaru.model.Transacao</class>
+		<class>br.edu.utfpr.cm.tsi.pi.sistemaru.models.Funcionario</class>
+		<class>br.edu.utfpr.cm.tsi.pi.sistemaru.models.Cliente</class>
+		<class>br.edu.utfpr.cm.tsi.pi.sistemaru.models.Transacao</class>
 
 		<!-- Propriedades do hibernate -->
 		<properties>

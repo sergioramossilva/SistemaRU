@@ -3,11 +3,11 @@
         "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
 <tiles-definitions>
 
-	<definition name="defaultTemplate" template="/WEB-INF/templates/default/template.jsp">
-	    <put-attribute name="header" value="/WEB-INF/templates/head.jsp" />
-		<put-attribute name="header" value="/WEB-INF/templates/default/header.jsp" />
-		<put-attribute name="menu" value="/WEB-INF/templates/default/menu.jsp" />
-		<put-attribute name="footer" value="/WEB-INF/templates/default/footer.jsp" />
+	<definition name="master" template="/WEB-INF/templates/master.jsp">
+	    <put-attribute name="head" value="/WEB-INF/templates/head.jsp" />
+		<put-attribute name="header" value="/WEB-INF/templates/header.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/templates/menu.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/templates/footer.jsp" />
 	</definition>
 
 </tiles-definitions>
