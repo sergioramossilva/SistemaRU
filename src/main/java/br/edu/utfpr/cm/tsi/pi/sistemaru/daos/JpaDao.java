@@ -26,8 +26,7 @@ public class JpaDao<E, I> implements Dao<E, I> {
 
 	@Override
 	public void delete(E entity) {
-		// TODO Auto-generated method stub
-
+		manager.remove(manager.merge(entity));
 	}
 
 	@Override
