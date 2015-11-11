@@ -1,5 +1,6 @@
 package br.edu.utfpr.cm.tsi.pi.sistemaru.daos;
 
+import java.lang.reflect.Field;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -20,8 +21,23 @@ public class JpaDao<E, I> implements Dao<E, I> {
 
 	@Override
 	public void save(E entity) {
-		// TODO Auto-generated method stub
 
+		try {
+			
+			Field chave = entity.getClass().getDeclaredField("id");
+			chave.setAccessible(true);
+			Object valorChave = chave.get(entity);
+			
+			if (valorChave == null) {
+				manager.persist(entity);
+			} else {
+				manager.merge(entity);
+			}
+
+		} catch (Exception ex) {
+
+			ex.getMessage();
+		}
 	}
 
 	@Override

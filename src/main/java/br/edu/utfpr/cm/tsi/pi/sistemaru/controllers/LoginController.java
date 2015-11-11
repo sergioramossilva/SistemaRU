@@ -13,8 +13,8 @@ public class LoginController {
 	@Autowired
 	FuncionarioService funcionarioService;
 
-	@RequestMapping("/efetuarLogin")
-	public String efetuarLogin(Funcionario funcionario) {
+	@RequestMapping("efetuarLogin")
+	public String efetuarLogin(Funcionario funcionario, HttpSession sessao) {
 
 		Funcionario funcionarioLogado = funcionarioService.autenticar(funcionario.getLogin(), funcionario.getSenha());
 

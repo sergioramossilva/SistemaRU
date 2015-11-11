@@ -1,6 +1,6 @@
 package br.edu.utfpr.cm.tsi.pi.sistemaru.repositorys;
 
-import br.edu.utfpr.cm.tsi.pi.sistemaru.models.Cliente;
+import br.edu.utfpr.cm.tsi.pi.sistemaru.models.Funcionario;;
 
 public class FuncionarioRepository {
 
@@ -9,14 +9,6 @@ public class FuncionarioRepository {
 	}
 	
 	public Funcionario findByCpf(String cpf) {
-		return null;
-	}
-	
-	public List<Funcionario> findByName(String name) {
-		return null;
-	}
-	
-	public Cliente findByEmail(String email) {
 		return null;
 	}
 }
