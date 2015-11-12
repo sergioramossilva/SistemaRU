@@ -18,11 +18,9 @@ public class Transacao implements Serializable {
 	@Enumerated(EnumType.STRING)
 	private TipoTransacao tipoTransacao;
 
-	@Column(nullable = false)
 	@ManyToOne
 	private Funcionario funcionario;
 
-	@Column(nullable = false)
 	@ManyToOne
 	private Cliente cliente;
 

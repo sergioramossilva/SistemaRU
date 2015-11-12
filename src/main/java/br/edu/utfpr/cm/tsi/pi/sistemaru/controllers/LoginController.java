@@ -1,5 +1,7 @@
 package br.edu.utfpr.cm.tsi.pi.sistemaru.controllers;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,7 +12,7 @@ import br.edu.utfpr.cm.tsi.pi.sistemaru.services.FuncionarioService;
 @Controller
 public class LoginController {
 
-	@Autowired
+/*	@Autowired
 	FuncionarioService funcionarioService;
 
 	@RequestMapping("efetuarLogin")
@@ -28,5 +30,5 @@ public class LoginController {
 	@RequestMapping("/efetuarLogout")
 	public String logout() {
 		return null;
-	}
+	}*/
 }

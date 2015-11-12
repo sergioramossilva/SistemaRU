@@ -10,12 +10,7 @@
 		<welcome-file>index.jsp</welcome-file>
 	</welcome-file-list>
 
-	<!-- Duração da  sessão (em minutos) -->
-	<session-config>
-		<session-timeout>5</session-timeout>
-	</session-config>
-
-	<!-- Servlet do Spring que tratará as requisições -->
+	<!-- Servlet do Spring que tratará as requisições recebidas -->
 	<servlet>
 		<servlet-name>Spring-DispatcherServlet</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
@@ -31,20 +26,63 @@
 	</servlet-mapping>
 
 	<!-- Configuração do projeto -->
-	<listener>
+	<!-- <listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>/WEB-INF/spring/spring.xml</param-value>
-	</context-param>
+	</context-param> -->
+
+	<!-- Habilita o suporte a RESTful do Spring -->
+	<filter>
+		<filter-name>hiddenHttpMethodFilter</filter-name>
+		<filter-class>org.springframework.web.filter.HiddenHttpMethodFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>hiddenHttpMethodFilter</filter-name>
+		<servlet-name>Spring-DispatcherServlet</servlet-name>
+	</filter-mapping>
+
+	<!-- Filtro para o Spring Security -->
+<!-- 	<filter>
+		<filter-name>springSecurityFilterChain</filter-name>
+		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>springSecurityFilterChain</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping> -->
+
+	<!-- Enconding helper filter -->
+<!-- 	<filter>
+		<filter-name>encodingFilter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+		<init-param>
+			<param-name>forceEncoding</param-name>
+			<param-value>true</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>encodingFilter</filter-name>
+		<servlet-name>Spring-DispatcherServlet</servlet-name>
+	</filter-mapping> -->
 
 	<!-- Utilitário de codificação -->
-	<jsp-config>
+<!-- 	<jsp-config>
 		<jsp-property-group>
 			<url-pattern>*.jsp</url-pattern>
 			<page-encoding>UTF-8</page-encoding>
 			<trim-directive-whitespaces>true</trim-directive-whitespaces>
 		</jsp-property-group>
-	</jsp-config>
+	</jsp-config> -->
+
+	<!-- Duração da sessão (em minutos) -->
+	<session-config>
+		<session-timeout>5</session-timeout>
+	</session-config>
 </web-app>
