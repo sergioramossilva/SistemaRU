@@ -6,6 +6,12 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<name>Sistema RU</name>
+	<description>Sistema RU</description>
+	<url>https://github.com/sergioramossilva/SistemaRU</url>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	<!-- Configura as dependências do projeto -->
 	<dependencies>
 		<!-- Servlet -->
 		<dependency>
@@ -36,11 +42,8 @@
 			<artifactId>spring-orm</artifactId>
 			<version>4.1.6.RELEASE</version>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-tx</artifactId>
-			<version>4.1.6.RELEASE</version>
-		</dependency>
+		<!-- <dependency> <groupId>org.springframework</groupId> <artifactId>spring-tx</artifactId> 
+			<version>4.1.6.RELEASE</version> </dependency> -->
 		<!-- Logging -->
 		<dependency>
 			<groupId>log4j</groupId>
@@ -58,6 +61,7 @@
 		<finalName>SistemaRU</finalName>
 		<defaultGoal>compile</defaultGoal>
 		<plugins>
+			<!-- Define o plugin reponsável por compilar o projeto e a versão do JDK -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -69,6 +73,4 @@
 			</plugin>
 		</plugins>
 	</build>
-	<description>Sistema RU</description>
-	<url>https://github.com/sergioramossilva/SistemaRU</url>
 </project>
