@@ -18,5 +18,8 @@
 
 	<!-- Módulo do Spring-MVC -->
 	<import resource="spring-mvc.xml" />
+	
+	<!-- Módulo do Spring-Data -->
+    <import resource="spring-data.xml" />
 
 </beans>
