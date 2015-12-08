@@ -1,4 +1,4 @@
-image:https://travis-ci.org/sergioramossilva/SistemaRU.svg?branch=master["Build Status", link="https://travis-ci.org/sergioramossilva/SistemaRU"]
+[![Build Status](https://travis-ci.org/sergioramossilva/SistemaRU.svg?branch=master)](https://travis-ci.org/sergioramossilva/SistemaRU)
 
 # Descrição do sistema
 
